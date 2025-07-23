@@ -28,7 +28,7 @@ A Django-based web application for predicting the remaining shelf life of items 
 
 1. Clone the repository
 git clone https://github.com/Hemanth-Kumar-Yadlapalli/Remaining_Shelf_Life_Estimation.git
-cd Remaining_Shelf_Life_Estimation/remaining_shelf_life_estimation
+ cd Remaining_Shelf_Life_Estimation/remaining_shelf_life_estimation
 
 
 2. Create and activate virtual environment
