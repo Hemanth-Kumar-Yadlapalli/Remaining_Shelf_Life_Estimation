@@ -1,0 +1,156 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {
+	font-size: 24px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+        .style7 {
+	color: #FFFF00;
+	font-weight: bold;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF SHELF LIFE ESTIMATION TYPE !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="1122" align="center">
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center" class="style7">ENTER ALL  DATASETS DETAILS HERE !!! </div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" colspan="4" bgcolor="#FF0000"><div align="center"></div></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><span class="style7">Enter Fid</span></td>
+                                    <td><input type="text" name="Fid"></td>
+                                    <td bgcolor="#FF0000"><span class="style7">Enter Datesk </span></td>
+                                    <td><input type="text" name="Datesk"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><span class="style7">Enter Item_Name</span></td>
+                                    <td><input type="text" name="Item_Name"></td>
+                                    <td bgcolor="#FF0000"><span class="style7">Enter Departure_Date </span></td>
+                                    <td><input type="text" name="Departure_Date"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><span class="style7">Enter From_Source</span></td>
+                                    <td><input type="text" name="From_Source"></td>
+                                    <td bgcolor="#FF0000"><span class="style7">Enter To_Destination</span></td>
+                                    <td><input type="text" name="To_Destination"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><span class="style7">Enter Logistics_Name</span></td>
+                                    <td><input type="text" name="Logistics_Name"></td>
+                                    <td bgcolor="#FF0000"><span class="style7">Enter Temp</span></td>
+                                    <td><input type="text" name="Temp"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><span class="style7">Enter Oxygen</span></td>
+                                    <td><input type="text" name="Oxygen"></td>
+                                    <td bgcolor="#FF0000"><span class="style7">Enter Carbon_Dioxide</span></td>
+                                    <td><input type="text" name="Carbon_Dioxide"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><span class="style7">Enter ethylene</span></td>
+                                    <td><input type="text" name="ethylene"></td>
+                                    <td bgcolor="#FF0000"><span class="style7">Enter damage_due_to_vibration </span></td>
+                                    <td><input type="text" name="damage_due_to_vibration"></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><span class="style7">Enter Humidity</span></td>
+                                    <td><input type="text" name="Humidity"></td>
+                                    <td bgcolor="#FF0000">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FFFFFF"><div align="center"></div></td>
+                                    <td width="269">&nbsp;</td>
+                                    <td width="269"><input name="submit" type="submit" class="style1" value="Predict"></td>
+                                    <td width="269">&nbsp;</td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>&nbsp;</p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table width="883" height="56" border="0" align="center" >
+                                    <tr><td width="584" bgcolor="#FF0000"><div align="center"><span class="style6">PREDICTED SHELF LIFE ESTIMATION TYPE </span><span class="style7"> :: </span></div></td>
+
+
+
+                                      <td width="261" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center"><strong>{{objs}}</strong></div></td>
+                                    </tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

@@ -1,0 +1,22 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore virtual env
+venv/
+
+# Ignore database
+db.sqlite3
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore compiled files
+*.pyc
+
+# Ignore environment files
+.env
+
+# Ignore migrations (optional)
+**/migrations/*.py
+!**/migrations/__init__.py
