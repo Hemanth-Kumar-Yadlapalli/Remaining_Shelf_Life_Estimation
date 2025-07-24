@@ -1,6 +1,6 @@
 🧪 Remaining Shelf-Life Estimation
 
-A Django-based web application for predicting the remaining shelf life of items using machine learning. This project includes two user roles: **Remote User** and **Service Provider**, with separate interfaces and functionalities.
+A Django-based web application for predicting the remaining shelf life of fresh fruits and produce using machine learning. This project includes two user roles: **Remote User** and **Service Provider**, with separate interfaces and functionalities.
 
 ---
 
